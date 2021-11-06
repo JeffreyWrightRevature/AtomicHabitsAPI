@@ -110,5 +110,11 @@ namespace AtomicHabits.Repositories
       quotes[index] = _mapper.ViewModelToModel(quote);
       return Get(quote.Id);
     }
+
+    public void Delete(int id)
+    {
+      var index = quotes.FindIndex(quote => quote.Id == id);
+      quotes.RemoveAt(index);
+    }
   }//EoC
 }//EoN

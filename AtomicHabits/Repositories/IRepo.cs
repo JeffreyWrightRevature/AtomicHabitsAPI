@@ -8,5 +8,6 @@ namespace AtomicHabits.Repositories
     public IEnumerable<T> Get();
     public T Add(T obj);
     public T Update(T obj);
+    public void Delete(Y obj);
   }
 }

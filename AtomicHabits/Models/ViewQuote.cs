@@ -9,7 +9,7 @@ namespace AtomicHabits.Models
     public int Id { get; init; }
     [Required]
     public string Text { get; init; }
-    [Range(1, 1000)]
+    //[Range(1, 1000)]
     public int Page { get; init; }
     public string Category { get; init; }
   }

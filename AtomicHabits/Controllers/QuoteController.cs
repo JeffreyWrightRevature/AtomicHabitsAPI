@@ -59,5 +59,16 @@ namespace AtomicHabits.Controllers
         return NotFound();
       return _repository.Update(quote);
     }
+
+    // DELETE //Quote/5
+    [HttpDelete("{id}")]
+    public ActionResult DeleteItem(int id)
+    {
+      ViewQuote existingQuote = _repository.Get(id);
+      if (existingQuote is null)
+        return NotFound();
+      _repository.Delete(id);
+      return NoContent();
+    }
   }
 }
